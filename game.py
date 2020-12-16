@@ -75,7 +75,7 @@ walls = [spaceShipSize / 2, spaceShipSize / 2, width - spaceShipSize / 2,
 cat0 = PhotoImage(file="./images/cat0.png")
 cat1 = PhotoImage(file="./images/cat1.png")
 work = PhotoImage(file="./images/work.png")
-# backgrond images
+# background images
 menu_bg = PhotoImage(file="./images/menu_bg.png")
 game_bg = PhotoImage(file="./images/game_bg.png")
 lost_bg = PhotoImage(file="./images/lost_bg.png")
@@ -89,7 +89,6 @@ def quit():
 
 def updateLeaderBoard(time):
     # leaderboard.txt example included in directory
-    # Remove leaderboard.txt from directory to test if file does not exist
     # Keep leaderboard.txt in directory to test when file exists
     filename = "leaderboard.txt"
     under_10 = True
@@ -108,7 +107,7 @@ def updateLeaderBoard(time):
             leaderboard.close()
             lst_name = [name]
             lst_time = [time]
-            showLeaderBoard(lst_name, lst_time, name, True)
+            showLeaderBoard(lst_name, lst_time, name, under_10)
         else:
             # file exists
             regex_name = "^.+,"
