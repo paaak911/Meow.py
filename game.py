@@ -72,15 +72,15 @@ walls = [spaceShipSize / 2, spaceShipSize / 2, width - spaceShipSize / 2,
          height - spaceShipSize / 2]
 # game_ini
 # spaceShip
-cat0 = PhotoImage(file="./cat0.png")
-cat1 = PhotoImage(file="./cat1.png")
-work = PhotoImage(file="./work.png")
+cat0 = PhotoImage(file="./images/cat0.png")
+cat1 = PhotoImage(file="./images/cat1.png")
+work = PhotoImage(file="./images/work.png")
 # backgrond images
-menu_bg = PhotoImage(file="./menu_bg.png")
-game_bg = PhotoImage(file="./game_bg.png")
-lost_bg = PhotoImage(file="./lost_bg.png")
-won_bg = PhotoImage(file="./won_bg.png")
-ldr_bg = PhotoImage(file="./ldrboard_bg.png")
+menu_bg = PhotoImage(file="./images/menu_bg.png")
+game_bg = PhotoImage(file="./images/game_bg.png")
+lost_bg = PhotoImage(file="./images/lost_bg.png")
+won_bg = PhotoImage(file="./images/won_bg.png")
+ldr_bg = PhotoImage(file="./images/ldrboard_bg.png")
 
 
 def quit():
@@ -108,6 +108,7 @@ def updateLeaderBoard(time):
             leaderboard.close()
             lst_name = [name]
             lst_time = [time]
+            showLeaderBoard(lst_name, lst_time, name, True)
         else:
             # file exists
             regex_name = "^.+,"
