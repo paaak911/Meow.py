@@ -1132,27 +1132,27 @@ root.mainloop()
 # https://knowyourmeme.com/memes/wide-mouthed-singing-cat
 # _________________________________________________________________
 # work.png
-# Screenshot of MS Excel [Digital Image]. (2020). Pak Hung Vincent
-# Chiu's private collection
+# Screenshot of MS Excel [Digital Image]. (2020). Pak's
+# private collection
 # _________________________________________________________________
 # menu_bg.png
-# Meow.py menu background image [Digital Image]. (2020). Pak Hung
-# Vincent Chiu's private collection
+# Meow.py menu background image [Digital Image]. (2020). Pak's
+# private collection
 # _________________________________________________________________
 # game_bg.png
-# Game background image [Digital Image]. (2020). Pak Hung
-# Vincent Chiu's private collection
+# Game background image [Digital Image]. (2020). Pak's
+# private collection
 # _________________________________________________________________
 # lost_bg.png
-# Lost background image [Digital Image]. (2020). Pak Hung
-# Vincent Chiu's private collection
+# Lost background image [Digital Image]. (2020). Pak's
+# private collection
 # _________________________________________________________________
 # won_bg.png
-# won background image [Digital Image]. (2020). Pak Hung
-# Vincent Chiu's private collection
+# won background image [Digital Image]. (2020). Pak's
+# private collection
 # _________________________________________________________________
 # ldrboard_bg.png
-# Leaderboard background image [Digital Image]. (2020). Pak Hung
-# Vincent Chiu's private collection
+# Leaderboard background image [Digital Image]. (2020). Pak's
+# private collection
 # _________________________________________________________________
 # End
