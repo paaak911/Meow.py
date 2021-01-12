@@ -164,24 +164,30 @@ def updateLeaderBoard(time):
             showLeaderBoard(lst_name, lst_time, name, under_10)
     # only show if lost
     else:
+        if os.path.isfile(filename) is False:
+            # file does not exist
+            leaderboard = open(filename, "w")
+            leaderboard.close()
+            showLeaderBoard([], [], "", False)
         # file exists
-        regex_name = "^.+,"
-        regex_time = "\d+\.\d+;$"
-        lst_name = []
-        lst_time = []
-        data = tuple(open(filename, 'r'))
-        for i in data:
-            i_name = re.search(regex_name, i).group()
-            i_time = re.search(regex_time, i).group()
-            # delete trialing ;
-            i_name = i_name[:-1]
-            i_time = i_time[:-1]
-            i_time = round(float(i_time), 4)
-            lst_name.append(i_name)
-            lst_time.append(i_time)
-        name = ""
-        under_10 = True
-        showLeaderBoard(lst_name, lst_time, name, under_10)
+        else:
+            regex_name = "^.+,"
+            regex_time = "\d+\.\d+;$"
+            lst_name = []
+            lst_time = []
+            data = tuple(open(filename, 'r'))
+            for i in data:
+                i_name = re.search(regex_name, i).group()
+                i_time = re.search(regex_time, i).group()
+                # delete trialing ;
+                i_name = i_name[:-1]
+                i_time = i_time[:-1]
+                i_time = round(float(i_time), 4)
+                lst_name.append(i_name)
+                lst_time.append(i_time)
+            name = ""
+            under_10 = True
+            showLeaderBoard(lst_name, lst_time, name, under_10)
 
 
 def showLeaderBoard(lst_name, lst_time, name, under_10):
@@ -1101,11 +1107,11 @@ def game_ini():
                        text="[P] - Pause")
     canvas.create_text(44, 25, fill="white", font="Airal 10",
                        text="[B] - Boss")
-    canvas.create_text(75, 40, fill="white", font="Airal 10",
-                       text="[C] - Cheat for health")
-    canvas.create_text(80, 55, fill="white", font="Airal 10",
+    # canvas.create_text(75, 40, fill="white", font="Airal 10",
+    #                    text="[C] - Cheat for health")
+    canvas.create_text(80, 40, fill="white", font="Airal 10",
                        text="[Arrorw] - Move around")
-    canvas.create_text(76, 70, fill="white", font="Airal 10",
+    canvas.create_text(76, 55, fill="white", font="Airal 10",
                        text="[Space] - Shoot laser")
 
     # multithreading so that two functions can ran at same time when paused
